@@ -1,4 +1,4 @@
-# Caesar Cipher
+# Encryption and Dectryption Transmission with Caesar Cipher and One Time Pad 
 
 How to Run :
 
@@ -15,7 +15,11 @@ go mod init
 Listen on some port, example :
 
 ```
-go run main.go -mode=receiver -addr=:9000 -shift=3
+go run .\caesar\main.go -mode=receiver -addr=:9000 -shift=3
+```
+
+```
+go run .\one-time-pad\main.go -mode=receiver -addr=:9000
 ```
 
 ### Sender 
@@ -23,7 +27,11 @@ go run main.go -mode=receiver -addr=:9000 -shift=3
 Fill all the flag, for example :
 
 ```
-go run main.go -mode=sender -addr="127.0.0.1:9000" -shift=3
+go run .\caesar\main.go -mode=sender -addr="127.0.0.1:9000" -shift=3
+```
+
+```
+go run .\one-time-pad\main.go -mode=sender -addr="127.0.0.1:9000"
 ```
 
 You will prompted to input the text, and send those text by press `enter`
@@ -47,3 +55,4 @@ ping <<IP_ADDRESS>>
 in Ubuntu, (I use VM because it's much more simple)
 
 after that, use above instructions on receiver and sender to send and receive the message
+
