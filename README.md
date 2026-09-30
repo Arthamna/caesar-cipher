@@ -56,3 +56,27 @@ in Ubuntu, (I use VM because it's much more simple)
 
 after that, use above instructions on receiver and sender to send and receive the message
 
+
+## DES
+
+How to play :
+
+- Cek receiver ip with ipconfig, make sure on "wireless LAN adapter Wi-Fi" option, ipv4 :
+
+- Example :
+
+```
+Receiver:
+go run ./des -mode=receiver -addr=":9000" -key="133457799BBCDFF1" -block-mode=cbc -padding=pkcs7 -iv="0102030405060708"
+```
+
+```
+Sender:
+go run ./des -mode=sender -addr="10.125.137.63:9000" -key="133457799BBCDFF1" -block-mode=cbc -padding=pkcs7 -iv="0102030405060708"
+```
+
+### Hasil Wireshark
+
+![](result.png)
+
+
