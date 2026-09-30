@@ -134,7 +134,7 @@ func decryptMessage(ciphertext, key, iv []byte, blockMode string) ([]byte, error
 	if len(ciphertext) == 0 || len(ciphertext)%desBlockSize != 0 {
 		return nil, errors.New("ciphertext harus berupa blok-blok 8 byte")
 	}
-d
+
 	roundKeys, err := generateRoundKeys(key)
 	if err != nil {
 		return nil, err
